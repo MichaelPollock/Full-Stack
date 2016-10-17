@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Week 2 Part 1</title>
+</head>
+<body onload="do_game()">
+
+    <script>
+
+    function do_game() {
+        // Create a list of colors
+        colorList = ["Red", "Orange", "Yellow", "Green", "Blue", "Violet", "Coral", "Cyan", "Gray", "Navy", "Peru", "Plum", "Lime", "Olive"].sort();
+
+        // Get the index and name of a random color
+        colorIndex = Math.floor(Math.random() * colorList.length)
+        targetColor = colorList[colorIndex]
+
+        selectedColor = ""
+        colorString = makeColorString(colorList); // Create a string where each color in the array is on a separate line
+        while (selectedColor != targetColor)
+            {
+            selectedColor = prompt(colorString, selectedColor)
+            }
+
+    }
+    function makeColorString(list) {
+        count = 0;
+        debugMsg = "\n\n((DEBUG)) Selected color is " + targetColor +  "  Don't tell anyone I told you!!!"
+        colorString = "\n\nI am thinking of one of these colors:\n\n"
+        while (count < list.length) {
+            colorString = colorString + colorList[count] + "\n"
+            count = count + 1
+        }
+        colorStromg = colorString + "\n\nWhat color am I thinking of?"
+        colorString = colorString + debugMsg
+        return colorString
+    }
+    CSS_COLOR_NAMES = ["AliceBlue","AntiqueWhite","Aqua","Aquamarine","Azure","Beige","Bisque","Black","BlanchedAlmond","Blue","BlueViolet","Brown","BurlyWood","CadetBlue","Chartreuse","Chocolate","Coral","CornflowerBlue","Cornsilk","Crimson","Cyan","DarkBlue","DarkCyan","DarkGoldenRod","DarkGray","DarkGrey","DarkGreen","DarkKhaki","DarkMagenta","DarkOliveGreen","Darkorange","DarkOrchid","DarkRed","DarkSalmon","DarkSeaGreen","DarkSlateBlue","DarkSlateGray","DarkSlateGrey","DarkTurquoise","DarkViolet","DeepPink","DeepSkyBlue","DimGray","DimGrey","DodgerBlue","FireBrick","FloralWhite","ForestGreen","Fuchsia","Gainsboro","GhostWhite","Gold","GoldenRod","Gray","Grey","Green","GreenYellow","HoneyDew","HotPink","IndianRed","Indigo","Ivory","Khaki","Lavender","LavenderBlush","LawnGreen","LemonChiffon","LightBlue","LightCoral","LightCyan","LightGoldenRodYellow","LightGray","LightGrey","LightGreen","LightPink","LightSalmon","LightSeaGreen","LightSkyBlue","LightSlateGray","LightSlateGrey","LightSteelBlue","LightYellow","Lime","LimeGreen","Linen","Magenta","Maroon","MediumAquaMarine","MediumBlue","MediumOrchid","MediumPurple","MediumSeaGreen","MediumSlateBlue","MediumSpringGreen","MediumTurquoise","MediumVioletRed","MidnightBlue","MintCream","MistyRose","Moccasin","NavajoWhite","Navy","OldLace","Olive","OliveDrab","Orange","OrangeRed","Orchid","PaleGoldenRod","PaleGreen","PaleTurquoise","PaleVioletRed","PapayaWhip","PeachPuff","Peru","Pink","Plum","PowderBlue","Purple","Red","RosyBrown","RoyalBlue","SaddleBrown","Salmon","SandyBrown","SeaGreen","SeaShell","Sienna","Silver","SkyBlue","SlateBlue","SlateGray","SlateGrey","Snow","SpringGreen","SteelBlue","Tan","Teal","Thistle","Tomato","Turquoise","Violet","Wheat","White","WhiteSmoke","Yellow","YellowGreen"];
+
+    </script>
+</body>
+</html>
